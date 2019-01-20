@@ -1,0 +1,44 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+	<title>WME Course Exercise &bull; Solution Team 23</title>
+	<meta name="description" content="">
+	<meta name="author" content="Yanchen Zhao, Gabriella Novachka">
+	<meta name="keywords" content="Web and Multimedia Engineering, Course, Exercise">
+
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' type='text/css'>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="html5reset.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+  <div class=".container" id="main_container">
+    <select id="legend"></select>
+    <canvas id="map"></canvas>
+  </div>
+
+</body>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+<script type="text/javascript" src="d3.min.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+<!--
+<script type="text/javascript" src="script.js"></script>
+-->
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmFuam9iZWxwaGVnb3IiLCJhIjoiY2pyM2thOHF1MGJpNzQ5cW42dGU4ZDY5cCJ9.EpyAskgP_EMA8zsBYwNYHA';
+const mappa = new Mappa('MapboxGL', "pk.eyJ1IjoicmljYXJkb2xhbmduZXIiLCJhIjoiY2pxano2enh2MG1qazN4bm5lajIzeDl3eiJ9.wK0MtuxLgJxDcGUksKMeKg");
+const option = {
+    lat: 0,
+    lng: 0,
+    style: "mapbox://styles/mapbox/satellite-v9",
+    zoom: 3,
+    pitch: 50
+};
+const myMap = mappa.tileMap(option);
+myMap.overlay(canvas);
+</script>
+
+</html>
